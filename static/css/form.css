@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(annapurnahotel.jpg);
+    background-position: center;
+}
+#form{
+    background-color: #000;
+    height: 810px;
+    width: 800px;
+    margin: auto;
+    margin-top:150px;
+    opacity: 0.9;
+}
+#first-group{
+    border: 1px solid rosybrown;
+    width: 800px;
+    margin: auto;
+}
+#content{
+    border: 2px solid wheat;
+    margin: 20px;
+    margin-left: 8px;
+    padding: 5px;
+}
+
+#ci{
+    border: 0.5px solid wheat;
+    margin: 20px;
+    margin-left: 8px;
+    padding: 5px;
+    color: #fff;
+}
+#content #input{
+    border:none;
+    outline: none;
+    background: transparent;
+    margin-left: 8px;
+    width: 700px;
+    color: white;
+}
+::placeholder{
+    color:white
+}
+.fa{
+    display: inline-block;
+    color: red;
+    border-right: 1px solid #fff;
+    padding: 8px;
+    margin-left: 8px;
+}
+#submit-btn{
+    margin-top:10px;
+    margin-left: 600px;
+    background: transparent;
+    color: #fff;
+    width: 150px;
+    border:1px solid aqua;
+    outline: none;
+    padding: 15px;
+
+}
