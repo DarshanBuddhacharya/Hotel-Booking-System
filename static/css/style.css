@@ -1097,21 +1097,6 @@ h2 {
 		text-align: center;
 		margin-top: 20px;
 	}
-    .blog_banner .banner_content{
-        margin: 200px 0px 120px;
-    }
-    .categories_post img{
-        width: 100%;
-    }
-    .blog_categorie_area .col-lg-4 + .col-lg-4{
-        margin-top: 40px;
-    }
-    .blog_area{
-        padding-bottom: 80px;
-    }
-    .single-post-area .blog_right_sidebar{
-        margin-top: 30px;
-    }
 }
 @media(max-width: 767px){
 	.about_content {
@@ -1127,38 +1112,6 @@ h2 {
     .hotel_booking_table{
         display: block;
         padding: 30px 0px;
-    }
-    .gallery_item img {
-        max-width: 100%;
-        width: 100%;
-    }
-    .blog_banner .banner_content h4 {
-        font-size: 48px;
-        line-height: 58px;
-        margin-bottom: 20px;
-    }
-    .blog_info{
-        text-align: left !important;
-        padding-top: 0px;
-        padding-bottom: 10px;
-    }
-    .blog_meta li{
-        display: inline-block;
-        width: calc(95%/ 2);
-    }
-    .single-post .blog_info{
-        padding-top: 30px;
-        padding-bottom: 0px;
-    }
-    .single-post-area .social-links{
-        padding-left: 0px;
-        margin-bottom: 0px;
-    }
-    .comment-form .email {
-        margin-bottom: 0px;
-    }
-    .contact_form{
-        margin-top: 30px;
     }
 }
 @media(max-width: 575px){
@@ -1213,11 +1166,13 @@ h2 {
     }
 }
 @media only screen and (max-width: 1200px) {
+ .design{
+    margin-bottom: 600px;
+ }
   .footer {
     background: rgb(54, 53, 53);
     color: white;
     height: auto;
-    margin-top: 600px;
     clear: both;
   }
   .footer .footer-content {
