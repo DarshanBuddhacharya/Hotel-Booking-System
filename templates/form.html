@@ -3,8 +3,6 @@
 {% block content %}
 {% load static %}
 
-
-<body>
 <header class="header_area">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -27,25 +25,24 @@
         </nav>
     </div>
 </header>
-<form class="form-group">
     <div id="form">
         <h1 class="text-white text-center">Booking Form</h1>
         <form method="POST">
             <!--            {% csrf_token %}-->
             <div id="first-group">
             </div>
-            <div id="content">
+            <div id="bookform">
 
-                <i class="fa fa-user" aria-hidden="true"></i>
+                <n class="fa fa-user" aria-hidden="true"></n>
                 <input type="text" id="input" placeholder="Name" name="name" required/>
             </div>
-            <div id="content">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <div id="bookform">
+                <n class="fa fa-map-marker" aria-hidden="true"></n>
                 <input type="text" id="input" placeholder="Address" name="address" required/>
             </div>
 
-            <div id="content">
-                <i class="fa fa-flag" aria-hidden="true"></i>
+            <div id="bookform">
+                <n class="fa fa-flag" aria-hidden="true"></n>
                 <select id="input" name="nationality" style="background-color: black;" required>
                     <option value="">Select your Nationality</option>
                     <option value="afghan">Afghan</option>
@@ -243,29 +240,29 @@
                 </select>
             </div>
 
-            <div id="content">
-                <i class="fa fa-globe" aria-hidden="true"></i>
+            <div id="bookform">
+                <n class="fa fa-globe" aria-hidden="true"></n>
                 <input type="text" id="input" placeholder="Passport Number" name="passwort" required/>
             </div>
 
-            <div id="content">
-                <i class="fa fa-phone" aria-hidden="true"></i>
+            <div id="bookform">
+                <n class="fa fa-phone" aria-hidden="true"></n>
                 <input type="number" id="input" placeholder="Phone Number" name="phnumber" required/>
             </div>
             <div id="ci">CHCEK-IN :</div>
-            <div id="content">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
+            <div id="bookform">
+                <n class="fa fa-calendar" aria-hidden="true"></n>
                 <input type="date" id="input" name="checkin" required/>
             </div>
             <div id="ci">CHCEK-Out :</div>
-            <div id="content">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
+            <div id="bookform">
+                <n class="fa fa-calendar" aria-hidden="true"></n>
                 <input type="date" id="input" name="checkout" required/>
 
             </div>
 
-            <div id="content">
-                <i class="fa fa-users" aria-hidden="true"></i>
+            <div id="bookform">
+                <n class="fa fa-users" aria-hidden="true"></n>
                 <select id="input" style="background-color: black;" required>
                     <option value="">Room Type</option>
                     <option value="">Normal</option>
@@ -282,9 +279,4 @@
 
         </form>
     </div>
-
-</form>
-
-</body>
-
 {% endblock %}

@@ -14,12 +14,38 @@ body{
     margin-top:150px;
     opacity: 0.9;
 }
-#first-group{
-    border: 1px solid rosybrown;
-    width: 800px;
-    margin: auto;
+n.fa.fa-user::before{
+color: red;
 }
-#content{
+n.fa.fa-map-marker::before{
+color: red;
+}
+n.fa.fa-flag::before{
+color: red;
+margin-right:5000px;
+}
+n.fa.fa-globe::before{
+color: red;
+}
+n.fa.fa-phone::before{
+color: red;
+}
+n.fa.fa-calendar::before{
+color: red;
+}
+n.fa.fa-calendar::before{
+color: red;
+}
+n.fa.fa-users::before{
+color: red;
+}
+div.nice-select{
+border: 2px solid wheat;
+margin: -30px;
+margin-left: 20px;
+padding: 5px;
+}
+#bookform{
     border: 2px solid wheat;
     margin: 20px;
     margin-left: 8px;
@@ -33,7 +59,7 @@ body{
     padding: 5px;
     color: #fff;
 }
-#content #input{
+#bookform #input{
     border:none;
     outline: none;
     background: transparent;
@@ -43,22 +69,4 @@ body{
 }
 ::placeholder{
     color:white
-}
-.fa{
-    display: inline-block;
-    color: red;
-    border-right: 1px solid #fff;
-    padding: 8px;
-    margin-left: 8px;
-}
-#submit-btn{
-    margin-top:10px;
-    margin-left: 600px;
-    background: transparent;
-    color: #fff;
-    width: 150px;
-    border:1px solid aqua;
-    outline: none;
-    padding: 15px;
-
 }
