@@ -39,12 +39,6 @@ color: red;
 n.fa.fa-users::before{
 color: red;
 }
-div.nice-select{
-border: 2px solid wheat;
-margin: -30px;
-margin-left: 20px;
-padding: 5px;
-}
 #bookform{
     border: 2px solid wheat;
     margin: 20px;
