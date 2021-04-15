@@ -3,7 +3,7 @@
 {% block content %}
 {% load static %}
 
-<header class="header_area">
+<header class="header_area" xmlns="http://www.w3.org/1999/html">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand logo_h" href="index.html"><img src="{% static 'image/Logo1.jpg' %} " alt=""></a>
@@ -41,9 +41,9 @@
 
             <div id="bookform">
                 <n class="fa fa-flag" aria-hidden="true"></n>
-                <select id="input" name="nationality" style="background-color: black;" required>
-                    <option value="">Select your Nationality</option>
-                    <option value="afghan">Afghan</option>
+                 <select id="nation"style="background-color: black;" required>
+                     <option data-display="">Nationality</option>
+                     <option value="afghan">Afghan</option>
                     <option value="albanian">Albanian</option>
                     <option value="algerian">Algerian</option>
                     <option value="american">American</option>
@@ -235,12 +235,13 @@
                     <option value="yemenite">Yemenite</option>
                     <option value="zambian">Zambian</option>
                     <option value="zimbabwean">Zimbabwean</option>
-                </select>
+                 </select>
+
             </div>
 
             <div id="bookform">
                 <n class="fa fa-globe" aria-hidden="true"></n>
-                <input type="text" id="input" placeholder="Passport Number" name="passwort" required/>
+                <input type="text" id="input" placeholder="Passport Number" name="passport" required/>
             </div>
 
             <div id="bookform">

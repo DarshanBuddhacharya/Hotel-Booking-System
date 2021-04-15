@@ -45,7 +45,6 @@ color: red;
     margin-left: 8px;
     padding: 5px;
 }
-
 #ci{
     border: 0.5px solid wheat;
     margin: 20px;
@@ -63,4 +62,6 @@ color: red;
 }
 ::placeholder{
     color:white
-}
+
+
+
