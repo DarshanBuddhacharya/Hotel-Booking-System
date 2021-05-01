@@ -2,11 +2,14 @@
 
 {% block content %}
 {% load static %}
+<!-- <div class='spinner-wrapper'>
+    <div class="spinner"></div>
+</div> -->
  <!--================Header Area =================-->
         <header class="header_area">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand logo_h" href=""><img src="{% static 'image/Logo1.jpg' %}" alt=""></a>
+                    <a class="navbar-brand logo_h" href=""><img src="{% static 'image/Logo1.jpg' %} " alt="Main logo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -15,9 +18,9 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="accommodation.html">Accommodation</a></li>
+                            <li class="nav-item"><a class="nav-link" href="accommodation.html">Vehicles</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
+                            <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -28,13 +31,13 @@
         <!--================Banner Area =================-->
         <section class="banner_area">
             <div class="booking_table d_flex align-items-center">
-            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-				<div class="container">
-					<div class="banner_content text-center">
-						<h2>Hotel Annapurna </h2>
+                <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+                <div class="container">
+                    <div class="banner_content text-center">
+                        <h2>Hotel Annapurna</h2>
                         <h3>Durbar Marg, Kathmandu</h3>
-					</div>
-				</div>
+                    </div>
+                </div>
             </div>
             <div class="hotel_booking_area position">
                 <div class="container">
@@ -47,48 +50,54 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="book_tabel_item">
+                                            <form>
                                             <div class="form-group">
                                                 <div class='input-group date' id='datetimepicker11'>
-                                                    <input type='text' class="form-control" placeholder="Arrival Date"/>
+                                                    <input type='text' class="form-control" placeholder="Drop-off Date" id="date1"/>
                                                     <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        <i class="fa fa-calendar" aria-hidden="true" id="cal"></i>
                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" placeholder="Departure Date"/>
+                                                    <input type='text' class="form-control" placeholder="Return Date" id="date2"/>
                                                     <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        <i class="fa fa-calendar" aria-hidden="true"  id="cal"></i>
                                                     </span>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-<!--                                   AYUSH-->
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Adult">Adult</option>
-                                                    <option value="1">Old</option>
-                                                    <option value="2">Younger</option>
-                                                    <option value="3">Potato</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Child">Child</option>
-                                                    <option value="1">Child</option>
-                                                    <option value="2">Baby</option>
-                                                    <option value="3">Child</option>
-                                                </select>
-                                            </div>
+                                        </form>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="book_tabel_item">
-                                            <a class="book_now_btn button_hover" href="form.html">Book Now</a>
+                                            <div class="input-group">
+                                                <h5 id = in>Persons</h5>
+                                                <label>
+                                                <input type = "range" min="1" max="50" value="2" id="slider">
+                                                    <div id = "selector">
+                                                        <div class="selectBtn"></div>
+                                                        <div id = "SelectValue"></div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="input-group" id="in2">
+                                                    <h5 id = in>Rooms</h5>
+                                                <label>
+                                                    <input type = "range" min="1" max="20" value="1" id="slider2">
+                                                        <div id = "selector2">
+                                                            <div class="selectBtn2"></div>
+                                                            <div id = "SelectValue2"></div>
+                                                        </div>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="book_tabel_item">
+                                            <a class="book_now_btn button_hover" href="accommodation.html" onclick="date()">Book Now</a>
+                                            <a class="book_now_btn button_hover" href="cancel.html" id = "cancel">Booking cancellation </a>
                                         </div>
                                     </div>
                                 </div>
@@ -98,11 +107,9 @@
                 </div>
             </div>
         </section>
-<!--AYUSH-->
         <!--================Banner Area =================-->
 
                 <!--================ Facilities Area  =================-->
-<!--AYUSH-->
         <section class="facilities_area section_gap">
             <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
             </div>
@@ -113,38 +120,36 @@
                 <div class="row mb_30">
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h6 class="sec_h4"><i class="fa fa-car"></i>Perfect condition</h6>
+                            <p>Cleaning, disinfecting and maintaing the vehicle after each customer return and before our employees get in the vehicle to move around is one of our main priority. weekly inspeactions are conducted.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Party Hall</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h6 class="sec_h4"><i class="fa fa-heart"></i>Insured</h6>
+                            <p>car insurance policy provides financial coverage to the beneficiary of the car policy against any loss or damages arising out of road accidents, third party liabilities, theft, man made calamities, fire or natural disaster.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h6 class="sec_h4"><i class="fa fa-money-bill"></i>Resonable price</h6>
+                            <p>Users who book a rental car with us often find prices below the average daily rate each day.what type of car you’re interested in, and the length of your rental, you could find prices for as low  each day when booking with us.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-car"></i>Hotel Rooms</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h6 class="sec_h4"><i class="fa fa-clock"></i>On-time</h6>
+                            <p>Punctuality is of great importance, it is truly underestimated and we give time our utmost importance. When a company becomes punctual, everything else falls into place. You get discipline in life and also earn the respect of the others.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h6 class="sec_h4"><i class="fa fa-phone"></i>Active customer service</h6>
+                            <p>Quality customer service is about making sure your customers feel they are valued, treated fairly, and appreciated by your business. quality customer service is about making sure your customers feel they are valued</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--================ Facilities Area  =================-->
-<!--AYUSH-->
 
 {% endblock %}
