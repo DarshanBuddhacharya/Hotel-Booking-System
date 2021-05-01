@@ -19,8 +19,8 @@ def accommodation(request):
 def form(request):
     if request.method == 'POST':
         if request.POST.get('name') and request.POST.get('address') and request.POST.get(
-                'nationality') and request.POST.get('passport') and request.POST.get('phnumber') and request.POST.get(
-            'checkin') and request.POST.get('checkout') and request.POST.get('roomtype'):
+            'nationality') and request.POST.get('passport') and request.POST.get('phnumber') and request.POST.get(
+                'checkin') and request.POST.get('checkout') and request.POST.get('roomtype'):
             saverecord = Booking()
             saverecord.name = request.POST.get('name')
             saverecord.address = request.POST.get('address')
@@ -33,3 +33,19 @@ def form(request):
             saverecord.save()
             messages.success(request, "Booking submitted successfully")
     return render(request, 'form.html')
+
+
+def help(request):
+    return render(request, 'help.html')
+
+
+def booked(request):
+    return render(request, 'booked.html')
+
+
+def cancel(request):
+    return render(request, 'cancel.html')
+
+
+def confirm(request):
+    return render(request, 'confirm.html')
