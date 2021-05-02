@@ -47,20 +47,21 @@
           </a>
         </li>
       </ul>
-    <form id = "book" action="booked.html">
+    <form id = "" method ="post">
+        {% csrf_token %}
         <div id="first-group">
         </div>
         <div id="bookform">
             <n class="fa fa-user" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="Name" name="name" required/>
+            <input name='name' type="text" id="input" placeholder="Name" name="name" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-map-marker" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="Address" name="address" required/>
+            <input name='address' type="text" id="input" placeholder="Address" name="address" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-flag" aria-hidden="true"></n>
-            <select id="nation" style="width: 95%; border: none;" required>
+            <select  name='nationality'  id="nation" style="width: 95%; border: none;" required>
                 <option data-display="">Nationality</option>
                 <option value="afghan">Afghan</option>
                 <option value="albanian">Albanian</option>
@@ -258,33 +259,33 @@
         </div>
             <div id="bookform">
             <n class="fa fa-globe" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="Passport Number" name="Passport" required/>
+            <input name='passport' type="text" id="input" placeholder="Passport Number" name="passport" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-envelope" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="E-mail Address" name="mail-address" required/>
+            <input name="email" type="text" id="input" placeholder="E-mail Address" name="email" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-phone" aria-hidden="true"></n>
-            <input type="number" id="input" placeholder="Phone Number" name="phnumber" required/>
+            <input  name='phnumber' type="number" id="input" placeholder="Phone Number" name="phnumber" required/>
         </div>
         <div id="ci">Arrival Date:</div>
         <div class='input-group date' id='datetimepicker11'>
-            <input type='text' class="form-control" placeholder="Arrival Date" id="fdate1"/>
+            <input  name='checkin' type='text' class="form-control" placeholder="Arrival Date" id="checkin"/>
             <span class="input-group-addon">
                 <i class="fa fa-calendar" aria-hidden="true" id="cal"></i>
             </span>
         </div>
         <div id="ci">Depature Date:</div>
         <div class='input-group date' id='datetimepicker1'>
-            <input type='text'class="form-control" placeholder="Depature Date"/>
+            <input name='checkout' type='text 'class="form-control" placeholder="Depature Date"/>
             <span class="input-group-addon">
                 <i class="fa fa-calendar" aria-hidden="true"  id="cal"></i>
             </span>
         </div>
         <div id="bookform">
             <n class="fa fa-bed" aria-hidden="true"></n>
-            <select id="nation" style="width: 95%; border: none;" required>
+            <select  name='roomtype' id="nation" style="width: 95%; border: none;" required>
                 <option data-display="" id="ai"></option>
                 <option value="">Standard Room</option>
                 <option value="">Deluxe Room</option>

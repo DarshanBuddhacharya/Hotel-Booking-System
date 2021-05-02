@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from booking.models import Booking
-from django.contrib import messages
 
 
 def index(request):
@@ -17,21 +16,29 @@ def accommodation(request):
 
 
 def form(request):
-    if request.method == 'POST':
-        if request.POST.get('name') and request.POST.get('address') and request.POST.get(
-            'nationality') and request.POST.get('passport') and request.POST.get('phnumber') and request.POST.get(
-                'checkin') and request.POST.get('checkout') and request.POST.get('roomtype'):
-            saverecord = Booking()
-            saverecord.name = request.POST.get('name')
-            saverecord.address = request.POST.get('address')
-            saverecord.nationality = request.POST.get('nationality')
-            saverecord.passport = request.POST.get('passport')
-            saverecord.phnumber = request.POST.get('phnumber')
-            saverecord.checkin = request.POST.get('checkin')
-            saverecord.checkout = request.POST.get('checkout')
-            saverecord.roomtype = request.POST.get('roomtype')
-            saverecord.save()
-            messages.success(request, "Booking submitted successfully")
+    if request.method == "POST":
+        booking = Booking()
+        name = request.POST.get('name')
+        address = request.POST.get('address')
+        nationality = request.POST.get('nationality')
+        passport = request.POST.get('passport')
+        email = request.POST.get('email')
+        phnumber = request.POST.get('phnumber')
+        checkin = request.POST.get('checkin')
+        checkout = request.POST.get('checkout')
+        roomtype = request.POST.get('roomtype')
+        booking.name = name
+        booking.address = address
+        booking.nationality = nationality
+        booking.passport = passport
+        booking.email = email
+        booking.phnumber = phnumber
+        booking.checkin = checkin
+        booking.checkout = checkout
+        booking.roomtype = roomtype
+        booking.save()
+        return HttpResponse("<h1>Thanks for Booking</h1>")
+
     return render(request, 'form.html')
 
 

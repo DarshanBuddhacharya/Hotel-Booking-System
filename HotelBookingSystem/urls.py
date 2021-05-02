@@ -18,12 +18,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('booking.urls')),
     path('contact/', include('booking.urls')),
     path('form/', include('booking.urls')),
     path('accommodation/', include('booking.urls')),
     path('help/', include('booking.urls')),
     path('booked/', include('booking.urls')),
     path('cancel/', include('booking.urls')),
-    path('confirm/', include('booking.urls'))
+    path('confirm/', include('booking.urls')),
+    path('', include('booking.urls')),
 ]

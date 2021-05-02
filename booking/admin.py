@@ -3,7 +3,7 @@ from .models import Booking
 
 
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'nationality', 'passport', 'checkin', 'checkout', 'roomtype')
+    list_display = ('name', 'address', 'nationality', 'passport','email','checkin', 'checkout', 'roomtype')
 
 
 admin.site.register(Booking, BookingAdmin)
