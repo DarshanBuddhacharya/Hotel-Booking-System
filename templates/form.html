@@ -17,7 +17,8 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="../accommodation.html">Accommodation</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../help.html">Help</a></li>
                     <li class="nav-item"><a class="nav-link" onclick="invertColor()" title="Invert Color for color blindness"><i class="fa fa-adjust"></i> Invert Color</a></li>
                     <li class="nav-item"><a class="nav-link" onclick="changeFont('decrease')" title="Decrease Font Size">A- </a></li>
                     <li class="nav-item"><a class="nav-link" onclick="changeFont('original')" title="Original Font Size">A  </a></li>
@@ -31,12 +32,12 @@
     <h1 class="text-center">Booking Form</h1>
     <ul class="breadcrumb">
         <li class="completed">
-          <a href="index.html">
+          <a href="../">
             Home
           </a>
         </li>
         <li class="active">
-          <a href="accommodation.html">
+          <a href="../accommodation.html">
             Accommodation
           </a>
         </li>
@@ -254,7 +255,6 @@
                 <option value="zambian">Zambian</option>
                 <option value="zimbabwean">Zimbabwean</option>
             </select>
-
         </div>
         <div id="bookform">
             <n class="fa fa-globe" aria-hidden="true"></n>
@@ -277,7 +277,7 @@
         </div>
         <div id="ci">Depature Date:</div>
         <div class='input-group date' id='datetimepicker1'>
-            <input type='text' id="fdate2" class="form-control" placeholder="Depature Date" id="fdate2"/>
+            <input type='text'class="form-control" placeholder="Depature Date"/>
             <span class="input-group-addon">
                 <i class="fa fa-calendar" aria-hidden="true"  id="cal"></i>
             </span>
@@ -291,7 +291,6 @@
                 </div>
                 <input type="hidden" name="gender">
                 <ul class="dropdown-menu">
-                    <li>Room Type</li>
                   <li>Normal Room</li>
                   <li>Deluxe Room</li>
                   <li>Club Room</li>
