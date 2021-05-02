@@ -237,7 +237,7 @@ button:focus {
   background: #8e9aaf;
   list-style: none;
   overflow: hidden;
-  max-width: 370px;
+  max-width: 400px;
 }
 .breadcrumb > li + li:before {
   padding: 0;

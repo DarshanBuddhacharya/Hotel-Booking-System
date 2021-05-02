@@ -284,19 +284,13 @@
         </div>
         <div id="bookform">
             <n class="fa fa-bed" aria-hidden="true"></n>
-            <div class="dropdown">
-                <div class="select">
-                  <span id="ai"></span>
-                  <i class="fa fa-chevron-left"></i>
-                </div>
-                <input type="hidden" name="gender">
-                <ul class="dropdown-menu">
-                  <li>Normal Room</li>
-                  <li>Deluxe Room</li>
-                  <li>Club Room</li>
-                  <li>Suites</li>
-                </ul>
-              </div>
+            <select id="nation" style="width: 95%; border: none;" required>
+                <option data-display="" id="ai"></option>
+                <option value="">Standard Room</option>
+                <option value="">Deluxe Room</option>
+                <option value="">Club Room</option>
+                <option value="">Suites</option>
+            </select>
         </div>
         <div id="ci">Payment on Arrival</div>
         <button type="submit" class="btn theme_btn button_hover">submit
