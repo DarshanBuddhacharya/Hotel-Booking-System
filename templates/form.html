@@ -28,13 +28,28 @@
     </div>
 </header>
 <div id="form">
-    <h1 class="text-white text-center">Booking Form</h1>
-    <form method="POST">
-        <!--            {% csrf_token %}-->
+    <h1 class="text-center">Booking Form</h1>
+    <ul class="breadcrumb">
+        <li class="completed">
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+        <li class="active">
+          <a href="accommodation.html">
+            Accommodation
+          </a>
+        </li>
+        <li id = "active">
+          <a href="">
+            Booking Form
+          </a>
+        </li>
+      </ul>
+    <form id = "book" action="booked.html">
         <div id="first-group">
         </div>
         <div id="bookform">
-
             <n class="fa fa-user" aria-hidden="true"></n>
             <input type="text" id="input" placeholder="Name" name="name" required/>
         </div>
@@ -42,10 +57,9 @@
             <n class="fa fa-map-marker" aria-hidden="true"></n>
             <input type="text" id="input" placeholder="Address" name="address" required/>
         </div>
-
         <div id="bookform">
             <n class="fa fa-flag" aria-hidden="true"></n>
-            <select id="nation" style="background-color: black;" required>
+            <select id="nation" style="width: 95%; border: none;" required>
                 <option data-display="">Nationality</option>
                 <option value="afghan">Afghan</option>
                 <option value="albanian">Albanian</option>
@@ -242,44 +256,52 @@
             </select>
 
         </div>
-
         <div id="bookform">
             <n class="fa fa-globe" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="Passport Number" name="passport" required/>
+            <input type="text" id="input" placeholder="Passport Number" name="Passport" required/>
         </div>
-
+        <div id="bookform">
+            <n class="fa fa-envelope" aria-hidden="true"></n>
+            <input type="text" id="input" placeholder="E-mail Address" name="mail-address" required/>
+        </div>
         <div id="bookform">
             <n class="fa fa-phone" aria-hidden="true"></n>
             <input type="number" id="input" placeholder="Phone Number" name="phnumber" required/>
         </div>
-        <div id="ci">CHCEK-IN :</div>
-        <div id="bookform">
-            <n class="fa fa-calendar" aria-hidden="true"></n>
-            <input type="date" id="input" name="checkin" required/>
+        <div id="ci">Drop off:</div>
+        <div class='input-group date' id='datetimepicker11'>
+            <input type='text' class="form-control" placeholder="Drop-off Date" id="fdate1"/>
+            <span class="input-group-addon">
+                <i class="fa fa-calendar" aria-hidden="true" id="cal"></i>
+            </span>
         </div>
-        <div id="ci">CHCEK-Out :</div>
-        <div id="bookform">
-            <n class="fa fa-calendar" aria-hidden="true"></n>
-            <input type="date" id="input" name="checkout" required/>
-
+        <div id="ci">Return Date:</div>
+        <div class='input-group date' id='datetimepicker1'>
+            <input type='text' id="fdate2" class="form-control" placeholder="Return Date" id="fdate2"/>
+            <span class="input-group-addon">
+                <i class="fa fa-calendar" aria-hidden="true"  id="cal"></i>
+            </span>
         </div>
-
         <div id="bookform">
-            <n class="fa fa-users" aria-hidden="true"></n>
-            <select id="input" style="background-color: black;" required>
-                <option value="">Room Type</option>
-                <option value="">Normal</option>
-                <option value="">Deluxe</option>
-                <option value="">Heritage</option>
-            </select>
+            <n class="fa fa-bed" aria-hidden="true"></n>
+            <div class="dropdown">
+                <div class="select">
+                  <span id="ai"></span>
+                  <i class="fa fa-chevron-left"></i>
+                </div>
+                <input type="hidden" name="gender">
+                <ul class="dropdown-menu">
+                    <li>Room Type</li>
+                  <li>Normal Room</li>
+                  <li>Deluxe Room</li>
+                  <li>Club Room</li>
+                  <li>Suites</li>
+                </ul>
+              </div>
         </div>
-        <input type="Submit" value="Submit"/>
-        {% if messages %}
-        {% for message in messages %}
-        <h2 style="color: green">{{message}}</h2>
-        {% endfor %}
-        {% endif %}
-
+        <div id="ci">Payment on Arrival</div>
+        <button type="submit" class="btn theme_btn button_hover">submit
+        </button>
     </form>
-</div>
+</div>       
 {% endblock %}

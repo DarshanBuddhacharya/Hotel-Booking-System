@@ -237,7 +237,7 @@ button:focus {
   background: #8e9aaf;
   list-style: none;
   overflow: hidden;
-  max-width: 310px;
+  max-width: 370px;
 }
 .breadcrumb > li + li:before {
   padding: 0;
@@ -1303,7 +1303,7 @@ h2 {
 /* drop */
 
 .dropdown {
-  width: 90%;
+  width: 96%;
   display: inline-block;
   background-color: #fff;
   border-radius: 2px;
@@ -1375,7 +1375,6 @@ h2 {
 /*---------------------------------------------end footer----------------------------------------------------*/
 /*---------------------------------------------FORM START------------------------------*/
 #form {
-  height: 810px;
   max-width: 800px;
   margin: auto;
   padding-top: 150px;
