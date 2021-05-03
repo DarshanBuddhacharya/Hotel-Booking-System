@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Booking
+from .models import HotelBooking
 
 
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'nationality', 'passport','email','checkin', 'checkout', 'roomtype')
+    list_display = ('name', 'address', 'nationality', 'passport','email','phnumber','checkin', 'checkout', 'roomtype')
 
 
-admin.site.register(Booking, BookingAdmin)
+admin.site.register(HotelBooking, BookingAdmin)
