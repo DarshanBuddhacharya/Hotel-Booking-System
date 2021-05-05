@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from booking.models import HotelBooking
+from booking.models import Booking
 
 
 def index(request):
@@ -17,7 +17,7 @@ def accommodation(request):
 
 def form(request):
     if request.method == "POST":
-        booking = HotelBooking()
+        booking = Booking()
         name = request.POST.get('name')
         address = request.POST.get('address')
         nationality = request.POST.get('nationality')
