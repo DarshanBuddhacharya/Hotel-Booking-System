@@ -1,5 +1,8 @@
 
     window.onload =function (){
+        var local = document.getElementById('rooms');
+        console.log(local);
+        const myDiv = document.getElementById('rooms');
         var bodyFontSize = localStorage.getItem('bodyFontSize');
         let invertColor = localStorage.getItem('invertColor');
         if(invertColor === null || invertColor === "0"){

@@ -9,8 +9,8 @@ function ver(data){
 }
 
 function date(){
-    const date1 = document.getElementById('date1').value;
-    const date2 = document.getElementById('date2').value;
+    const date1 = document.getElementById('checkin').value;
+    const date2 = document.getElementById('checkout').value;
 
     localStorage.setItem('DATE1', date1);
     localStorage.setItem('DATE2', date2);
@@ -19,6 +19,6 @@ function date(){
 
 window.onload = function(){
     
-    document.getElementById("fdate1").innerHTML = localStorage.getItem('DATE1');
-    document.getElementById("fdate2").innerHTML = localStorage.getItem('DATE2');
+    document.getElementById("datetimepicker1").innerHTML = localStorage.getItem('DATE1');
+    document.getElementById("datetimepicker11").innerHTML = localStorage.getItem('DATE2');
 }

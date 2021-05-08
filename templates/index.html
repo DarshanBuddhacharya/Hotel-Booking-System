@@ -50,53 +50,43 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="book_tabel_item">
-                                            <form>
                                             <div class="form-group">
                                                 <div class='input-group date' id='datetimepicker11'>
-                                                    <input type='text' class="form-control" placeholder="Drop-off Date" id="date1"/>
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true" id="cal"></i>
-                                                    </span>
+                                                    <p id="check">check-in :</p>
+                                                    <input  name='checkin' type='datetime-local' class="form-control" placeholder="Arrival Date" id="checkin"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" placeholder="Return Date" id="date2"/>
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"  id="cal"></i>
-                                                    </span>
+                                                    <p id="check">check-out :</p>
+                                                        <input name='checkout' type='datetime-local' class="form-control" placeholder="Depature Date" id="checkout"/>
                                                 </div>
                                             </div>
-                                        </form>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" id="new">
                                         <div class="book_tabel_item">
                                             <div class="input-group">
                                                 <h5 id = in>Persons</h5>
-                                                <label>
                                                 <input type = "range" min="1" max="50" value="2" id="slider">
                                                     <div id = "selector">
                                                         <div class="selectBtn"></div>
                                                         <div id = "SelectValue"></div>
                                                     </div>
-                                                </label>
                                             </div>
                                             <div class="input-group" id="in2">
                                                     <h5 id = in>Rooms</h5>
-                                                <label>
                                                     <input type = "range" min="1" max="20" value="1" id="slider2">
                                                         <div id = "selector2">
                                                             <div class="selectBtn2"></div>
                                                             <div id = "SelectValue2"></div>
                                                         </div>
-                                                    </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="book_tabel_item">
-                                            <a class="book_now_btn button_hover" href="accommodation.html" onclick="date()">Book Now</a>
+                                            <a class="book_now_btn button_hover" href="accommodation.html" onclick="date(); noRooms()">Book Now</a>
                                             <a class="book_now_btn button_hover" href="cancel.html" id = "cancel">Booking cancellation </a>
                                         </div>
                                     </div>
@@ -151,12 +141,4 @@
                 </div>
             </div>
         </section>
-        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-<script src="{% static 'js/popper.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-<script src="{% static 'vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js' %}"></script>
-<script src="{% static 'js/stellar.js' %}"></script>
-<script src="{% static 'vendors/nice-select/js/jquery.nice-select.js' %}"></script>
-<script src="{% static 'js/custom.js' %}"></script>
 {% endblock %}

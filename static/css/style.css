@@ -71,7 +71,7 @@ button:focus {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 1270px;
   }
 }
 
@@ -659,6 +659,11 @@ button:focus {
   line-height: 24px;
   padding: 10px 0px 20px;
 }
+#check {
+  width: 90px;
+  text-align: center;
+  color: black;
+}
 /*------------------------------------------------BANNER CSS END-------------------------------------------*/
 .hotel_booking_table {
   background: #04091e;
@@ -684,6 +689,8 @@ button:focus {
 
 .book_tabel_item .form-group {
   margin-bottom: 0px;
+  background-color: #a3a3a3;
+  width: 290px;
 }
 
 .book_tabel_item .form-group .input-group {
@@ -824,7 +831,7 @@ button:focus {
   font-size: 13px;
   line-height: 38px;
   padding: 0px 20px;
-  color: #fffefe;
+  color: #000000;
   z-index: 0;
 }
 
@@ -896,6 +903,9 @@ button:focus {
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
+}
+#new {
+  padding-left: 30px;
 }
 /*//////////////////////////////////////////////////AYUSH/////////////////////////////////////////////*/
 /*-------------------------------------------ACCOMMODATION CSS START-----------------------------------------*/
