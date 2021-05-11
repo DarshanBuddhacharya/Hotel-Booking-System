@@ -688,9 +688,7 @@ button:focus {
 }
 
 .book_tabel_item .form-group {
-  margin-bottom: 0px;
-  background-color: #a3a3a3;
-  width: 290px;
+  max-width: 100%;
 }
 
 .book_tabel_item .form-group .input-group {
@@ -831,10 +829,12 @@ button:focus {
   font-size: 13px;
   line-height: 38px;
   padding: 0px 20px;
-  color: #000000;
+  color: white;
   z-index: 0;
 }
-
+::-webkit-calendar-picker-indicator {
+  filter: invert(3);
+}
 .book_tabel_item .form-group .input-group .form-control.placeholder {
   color: #fffefe;
 }

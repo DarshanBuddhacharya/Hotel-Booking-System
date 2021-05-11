@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<header class="header_area" xmlns="http://www.w3.org/1999/html">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand logo_h" href="index.html"><img src="{% static 'image/Logo1.jpg' %} " alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                <ul class="nav navbar-nav menu_nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../accommodation.html">Vehicles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Help.html">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="invertColor()" title="Invert Color for color blindness"><i class="fa fa-adjust"></i> Invert Color</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="changeFont('decrease')" title="Decrease Font Size">A- </a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="changeFont('original')" title="Original Font Size">A  </a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="changeFont('increase')" title="Increase Font Size">A+ </a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="form">
+    <h1 class="text-center">Booking cancellation Form</h1>
+    <ul class="breadcrumb" id="can">
+        <li class="completed">
+          <a href="../">
+            Home
+          </a>
+        </li>
+        <li id = "active">
+          <a href="">
+            Booking cancelltion Form
+          </a>
+        </li>
+      </ul>
+    <form method ="post">
+        {% csrf_token %}
+        <div id="bookform">
+            <n class="fa fa-user" aria-hidden="true"></n>
+            <input type="text" id="input" placeholder="Name" name="canName" required/>
+        </div>
+        <div id="bookform">
+            <n class="fa fa-hashtag" aria-hidden="true"></n>
+            <input type="text" id="input" placeholder="Order number" name="order" required/>
+        </div>
+        <div id="bookform">
+            <n class="fa fa-envelope" aria-hidden="true"></n>
+            <input type="text" id="input" placeholder="E-mail Address" name="canEmail" required/>
+        </div>
+        <div id="bookform">
+            <n class="fa fa-check-circle" aria-hidden="true"></n>
+            <input type="text" id="input" placeholder="verification code(provided in Email)" name="code" required/>
+        </div>
+
+        <div id="bookform">
+            <n class="fa fa-phone" aria-hidden="true"></n>
+            <input type="number" id="input" placeholder="Phone Number" name="phnumber" required/>
+        </div>
+        <div id="bookform">
+            <n class="fa fa-comment" aria-hidden="true"></n>
+            <input type="text" size = "100px" id="input" placeholder="Reason for cancellation" name="reason" required/>
+        </div>
+        <button type="submit" class="btn theme_btn button_hover">Submit
+        </button>
+    </form>
+</div>
+{% endblock %}

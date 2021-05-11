@@ -4,6 +4,11 @@ from booking.models import Booking
 from django.core.mail import send_mail
 
 
+import random
+x = random.randint(1000, 9999)
+ranNum = str(x)
+
+
 def index(request):
     return render(request, 'index.html')
 
@@ -45,7 +50,7 @@ def form(request):
             email,
             ['testproject1345@gmail.com'],
             fail_silently=False)
-        return HttpResponse("<h1>Thanks for Booking</h1>")
+        return render(request, 'conCancel.html')
 
     return render(request, 'form.html')
 
@@ -58,28 +63,40 @@ def booked(request):
     return render(request, 'booked.html')
 
 
-def cancel(request):
-    return render(request, 'cancel.html')
+def cancelForm(request):
+    if request.method == "POST":
+        message_name = request.POST.get('canName')
+        message_email = request.POST.get('canEmail')
+        message_order = request.POST.get('order')
+
+        send_mail(
+            message_name + "," + " " + "You have sucessfully canceled your Booking",
+            "Sorry For Your inconvinace, We understand your reason. Hope you consider us next time" + ranNum,
+            'testproject1345@gmail.com',
+            [message_email],
+            fail_silently=False)
+
+        return render(request, 'conCancel.html')
+    return render(request, 'cancelForm.html')
 
 
-def confirm(request):
-    return render(request, 'confirm.html')
+def conCancel(request):
+    return render(request, 'conCancel.html')
 
 
 def footer(request):
-    # if request.method == "POST":
-    #     message_name = request.POST.get('message-name')
-    #     message_email = request.POST.get('message-email')
-    #     message_number = request.POST.get('message-number')
-    #     message = request.POST.get('message')
+    if request.method == "POST":
+        message_name = request.POST.get('message-name')
+        message_email = request.POST.get('message-email')
+        message_number = request.POST.get('message-number')
+        message = request.POST.get('message')
 
-    #     send_mail(
-    #         message_name,
-    #         message,
-    #         message_email,
-    #         ['testproject1345@gmail.com'],
-    #         fail_silently=False)
+        send_mail(
+            message_name,
+            message,
+            message_email,
+            ['testproject1345@gmail.com'],
+            fail_silently=False)
 
-    #     return render(request, 'footer.html', {'message_name': message_name})
-    # else:
+        return render(request, 'footer.html', {'message_name': message_name})
     return render(request, 'footer.html')
