@@ -1,8 +1,7 @@
 
     window.onload =function (){
-        var local = document.getElementById('rooms');
-        console.log(local);
-        const myDiv = document.getElementById('rooms');
+        document.getElementsById("datetimepickera").innerHTML = localStorage.getItem('DATE1');
+        document.getElementById("datetimepickerb").innerHTML = localStorage.getItem('DATE2');
         var bodyFontSize = localStorage.getItem('bodyFontSize');
         let invertColor = localStorage.getItem('invertColor');
         if(invertColor === null || invertColor === "0"){

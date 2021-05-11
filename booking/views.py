@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from booking.models import Booking
+from django.core.mail import send_mail
 
 
 def index(request):
@@ -37,6 +38,13 @@ def form(request):
         booking.checkout = checkout
         booking.roomtype = roomtype
         booking.save()
+
+        send_mail(
+            name,
+            passport,
+            email,
+            ['testproject1345@gmail.com'],
+            fail_silently=False)
         return HttpResponse("<h1>Thanks for Booking</h1>")
 
     return render(request, 'form.html')
@@ -56,3 +64,22 @@ def cancel(request):
 
 def confirm(request):
     return render(request, 'confirm.html')
+
+
+def footer(request):
+    # if request.method == "POST":
+    #     message_name = request.POST.get('message-name')
+    #     message_email = request.POST.get('message-email')
+    #     message_number = request.POST.get('message-number')
+    #     message = request.POST.get('message')
+
+    #     send_mail(
+    #         message_name,
+    #         message,
+    #         message_email,
+    #         ['testproject1345@gmail.com'],
+    #         fail_silently=False)
+
+    #     return render(request, 'footer.html', {'message_name': message_name})
+    # else:
+    return render(request, 'footer.html')

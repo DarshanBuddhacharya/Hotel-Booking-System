@@ -26,4 +26,5 @@ urlpatterns = [
     path('cancel/', include('booking.urls')),
     path('confirm/', include('booking.urls')),
     path('', include('booking.urls')),
+    path('footer/', include('booking.urls'))
 ]

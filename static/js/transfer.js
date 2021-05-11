@@ -16,9 +16,3 @@ function date(){
     localStorage.setItem('DATE2', date2);
     return;
 }
-
-window.onload = function(){
-    
-    document.getElementById("datetimepicker1").innerHTML = localStorage.getItem('DATE1');
-    document.getElementById("datetimepicker11").innerHTML = localStorage.getItem('DATE2');
-}

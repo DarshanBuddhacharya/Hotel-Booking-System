@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    const lol = $("#mainForm").clone();
+    const lol = $("#first-group").clone();
     rom = parseInt( localStorage.getItem('ROOMS'));
     for(var i=1; i < rom; i++){
-        $("#mainForm").append(lol.clone());
+        $("#first-group").append(lol.clone());
     }
     console.log(rom);
 })

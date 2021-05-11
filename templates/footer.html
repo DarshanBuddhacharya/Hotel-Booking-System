@@ -1,0 +1,81 @@
+
+<!--================ start footer Area  =================-->
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-section more">
+            <h1 class="More">Keep in touch</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                tenetur nostrum tempora ex cupiditate consequuntur officia maxime ut
+                sapiente aut, dolore, quis aperiam quae, minima quam dolorum nemo
+                obcaecati blanditiis.
+            </p>
+            <div class="more-contact">
+                <span><i class="fas fa-phone"></i> xxx-xxx-xxxx</span>
+                <span
+                ><i class="fas fa-envelope"></i>
+              L5CG10 - Group1
+            </span>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-viber"></i></a>
+            </div>
+        </div>
+        <div class="footer-section links"></div>
+        <div class="footer-section feedback">
+            {% if message_name %}
+                <h2>
+                    Thanks {{message_name}}!</h2>
+                </h2>
+            {% else %}
+            <h1>Send an E-mail</h1>
+            <br/>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input
+                        type="email"
+                        name="message-email"
+                        class="text-input name-input"
+                        placeholder="Enter your Email"
+                        required
+                /><br/>
+                <input
+                        type="Name"
+                        name="message-name"
+                        class="text-input name-input"
+                        placeholder="Enter your Full name"
+                        required
+                /><br/>
+                <input
+                        type="number"
+                        name="message-number"
+                        class="text-input name-input"
+                        placeholder="Enter your Phone number"
+                        required
+                /><br/>
+                <textarea
+                        name="message"
+                        class="text-input feedback-input"
+                        placeholder="How are you feeling??"
+                        row="4"
+                        required
+                ></textarea
+                ><br/>
+                <button type="submit" class="btn">
+                    <i class="fas fa-envelope"></i>
+                    Send
+                </button>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; Annapurna Hotel.com | Designed by L5CG10 - Group1
+    </div>
+</div>
+<!--================ End footer Area  =================-->

@@ -10,5 +10,6 @@ urlpatterns = [
     path('help.html/', views.help),
     path('booked.html/', views.booked),
     path('cancel.html/', views.cancel),
-    path('confirm.html/', views.confirm)
+    path('confirm.html/', views.confirm),
+    path('footer.html/', views.footer)
 ]
