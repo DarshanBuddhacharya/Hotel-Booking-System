@@ -5,8 +5,10 @@ from django.core.mail import send_mail
 
 
 import random
-x = random.randint(1000, 9999)
+x = random.randint(100000, 999999)
+y = random.randint(100000, 999999)
 ranNum = str(x)
+ranNum2 = str(y)
 
 
 def index(request):
@@ -47,10 +49,10 @@ def form(request):
         send_mail(
             name,
             passport,
-            email,
-            ['testproject1345@gmail.com'],
+            'testproject1345@gmail.com',
+            [email],
             fail_silently=False)
-        return render(request, 'conCancel.html')
+        return render(request, 'conBook.html', {'name': name, 'ranNum': ranNum})
 
     return render(request, 'form.html')
 
@@ -59,8 +61,8 @@ def help(request):
     return render(request, 'help.html')
 
 
-def booked(request):
-    return render(request, 'booked.html')
+def ConBook(request):
+    return render(request, 'ConBook.html')
 
 
 def cancelForm(request):
