@@ -10,6 +10,7 @@ urlpatterns = [
     path('help.html/', views.help),
     path('ConBook.html/', views.ConBook),
     path('cancelForm.html/', views.cancelForm),
+    path('cancelForm.html/', views.Cancel),
     path('conCancel.html/', views.conCancel),
     path('footer.html/', views.footer)
 ]

@@ -2,9 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from booking.models import Booking
 from django.core.mail import send_mail
-
+from booking.models import Cancel
 
 import random
+
 x = random.randint(100000, 999999)
 y = random.randint(100000, 999999)
 ranNum = str(x)
@@ -67,15 +68,26 @@ def ConBook(request):
 
 def cancelForm(request):
     if request.method == "POST":
-        message_name = request.POST.get('canName')
-        message_email = request.POST.get('canEmail')
-        message_order = request.POST.get('order')
+        cancel = Cancel()
+        name = request.POST.get('name')
+        order = request.POST.get('order')
+        email = request.POST.get('email')
+        verification = request.POST.get('verification')
+        phnumber = request.POST.get('phnumber')
+        reason = request.POST.get('reason')
+        cancel.name = name
+        cancel.order = order
+        cancel.email = email
+        cancel.verification = verification
+        cancel.phnumber = phnumber
+        cancel.reason = reason
+        cancel.save()
 
         send_mail(
-            message_name + "," + " " + "You have sucessfully canceled your Booking",
+            name + "," + " " + "You have sucessfully canceled your Booking",
             "Sorry For Your inconvinace, We understand your reason. Hope you consider us next time" + ranNum,
             'testproject1345@gmail.com',
-            [message_email],
+            [email],
             fail_silently=False)
 
         return render(request, 'conCancel.html')

@@ -45,28 +45,28 @@
         {% csrf_token %}
         <div id="bookform">
             <n class="fa fa-user" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="Name" name="canName" required/>
+            <input name="name" type="text" id="input" placeholder="Name" name="name" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-hashtag" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="Order number" name="order" required/>
+            <input name="order" type="text" id="input" placeholder="Order number" name="order" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-envelope" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="E-mail Address" name="canEmail" required/>
+            <input name="email" type="text" id="input" placeholder="E-mail Address" name="email" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-check-circle" aria-hidden="true"></n>
-            <input type="text" id="input" placeholder="verification code(provided in Email)" name="code" required/>
+            <input name="verification" type="text" id="input" placeholder="verification code(provided in Email)" name="verification" required/>
         </div>
 
         <div id="bookform">
             <n class="fa fa-phone" aria-hidden="true"></n>
-            <input type="number" id="input" placeholder="Phone Number" name="phnumber" required/>
+            <input name="phnumber" type="number" id="input" placeholder="Phone Number" name="phnumber" required/>
         </div>
         <div id="bookform">
             <n class="fa fa-comment" aria-hidden="true"></n>
-            <input type="text" size = "100px" id="input" placeholder="Reason for cancellation" name="reason" required/>
+            <input name="reason" type="text" size = "100px" id="input" placeholder="Reason for cancellation" name="reason" required/>
         </div>
         <button type="submit" class="btn theme_btn button_hover">Submit
         </button>
