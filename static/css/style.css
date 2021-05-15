@@ -907,7 +907,6 @@ button:focus {
 #new {
   padding-left: 30px;
 }
-/*//////////////////////////////////////////////////AYUSH/////////////////////////////////////////////*/
 /*-------------------------------------------ACCOMMODATION CSS START-----------------------------------------*/
 .accomodation_item {
   margin-bottom: 30px;
@@ -1172,16 +1171,6 @@ button:focus {
 .container-fluid h2 {
   color: black;
   position: relative;
-}
-
-.container-fluid h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 12px;
-  width: 67px;
-  height: 2px;
-  background-color: white;
 }
 
 .accordion {

@@ -10,6 +10,7 @@ x = random.randint(100000, 999999)
 y = random.randint(100000, 999999)
 ranNum = str(x)
 ranNum2 = str(y)
+num = 3
 
 
 def index(request):

@@ -3,11 +3,6 @@ function cargo(data){
 }
 document.getElementById('ai').innerHTML = localStorage.getItem('ACAR');
 
-function ver(data){
-    localStorage.setItem("VERS", data);
-    document.getElementById("ver").innerHTML = localStorage.getItem('VERS');
-}
-
 function date(){
     const date1 = document.getElementById('checkin').value;
     const date2 = document.getElementById('checkout').value;

@@ -32,6 +32,3 @@ class Cancel(models.Model):
 
     class Meta:
         db_table = "cancel_book"
-
-
-
