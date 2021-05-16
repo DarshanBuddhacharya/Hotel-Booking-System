@@ -7,9 +7,9 @@ class Booking(models.Model):
     nationality = models.CharField(max_length=100)
     passport = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
-    phnumber = models.CharField(max_length=100)
-    checkin = models.DateTimeField(max_length=20)
-    checkout = models.DateTimeField(max_length=20)
+    phnumber = models.BigIntegerField(max_length=12)
+    checkin = models.DateTimeField(max_length=15)
+    checkout = models.DateTimeField(max_length=15)
     roomtype = models.CharField(max_length=100)
 
     def __str__(self):
@@ -24,7 +24,7 @@ class Cancel(models.Model):
     order = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     verification = models.CharField(max_length=100)
-    phnumber = models.CharField(max_length=100)
+    phnumber = models.BigIntegerField(max_length=12)
     reason = models.CharField(max_length=400)
 
     def __str__(self):
